@@ -17,21 +17,25 @@
         </nav>
         
         <div class="about-content">
-            <h2 class="about-subtitle">Safe, comprehensive and fast platform</h2>
-            <p class="about-text">The world's financial industry is changing from an opaque, traditional and centralized state to a transparent, technology-based and decentralized one. We at Betalin believe that with the advent of blockchain technology, the fourth industrial revolution is taking place and we should seek to create a fundamental and key role in this technology.</p>
+            <h2 class="about-subtitle">Smart, transparent and efficient platform</h2>
+            <p class="about-text">The global food industry is evolving from a fragmented,
+                manual, and wasteful state to a data-driven, streamlined,
+                and sustainable one. We believe that with the rise of integrated logistics and real-time inventory management,
+                a new era of food security is taking place,
+                and we aim to play a fundamental and key role in this transformation.</p>
             
             <div class="stats-container">
                 <div class="stat-card">
                     <h3>Number Of Transactions</h3>
-                    <p class="stat-number">20.123</p>
+                    <p class="stat-number">26000</p>
                 </div>
                 <div class="stat-card">
                     <h3>Established Year</h3>
-                    <p class="stat-number">1.400</p>
+                    <p class="stat-number">2026</p>
                 </div>
                 <div class="stat-card">
                     <h3>Number Of Users</h3>
-                    <p class="stat-number">13.560</p>
+                    <p class="stat-number">2600</p>
                 </div>
             </div>
         </div>
