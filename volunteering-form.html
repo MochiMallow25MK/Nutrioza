@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrioza - Volunteering Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Volunteering Form 🌾</h1>
+        
+        <div class="form-container">
+            <form id="volunteeringForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="volunteerType">Type of Volunteering</label>
+                    <select id="volunteerType" name="volunteerType" required>
+                        <option value="">Select Type</option>
+                        <option value="Food Transporter">Food Transporter</option>
+                        <option value="Heavy Load worker">Heavy Load worker</option>
+                        <option value="Warehouse Assistant">Warehouse Assistant</option>
+                        <option value="management assistant">management assistant</option>
+                        <option value="IT support">IT support</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
