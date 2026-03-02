@@ -11,9 +11,9 @@
         <h1 class="main-title">Nutrioza roles dashboard 🌾</h1>
         
         <nav class="navbar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="contact.html" class="nav-link">Contact Us</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="about.php" class="nav-link">About Us</a>
+            <a href="contact.php" class="nav-link">Contact Us</a>
         </nav>
         
         <div class="cards-container">

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutrioza - Donation Form</title>
+    <title>Nutrioza - Volunteering Form</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">Donation Form 🌾</h1>
+        <h1 class="main-title">Volunteering Form 🌾</h1>
         
         <div class="form-container">
-            <form id="donationForm">
+            <form id="volunteeringForm" method="POST" action="">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -47,43 +47,18 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="donationType">Type of Donation</label>
-                    <select id="donationType" name="donationType" required>
+                    <label for="volunteerType">Type of Volunteering</label>
+                    <select id="volunteerType" name="volunteerType" required>
                         <option value="">Select Type</option>
-                        <option value="money">Money</option>
-                        <option value="food">Food</option>
+                        <option value="Food Transporter">Food Transporter</option>
+                        <option value="Heavy Load worker">Heavy Load worker</option>
+                        <option value="Warehouse Assistant">Warehouse Assistant</option>
+                        <option value="management assistant">management assistant</option>
+                        <option value="IT support">IT support</option>
                     </select>
                 </div>
                 
-                <div class="form-group" id="moneyOptions" style="display:none;">
-                    <label for="moneyAmount">Select Amount</label>
-                    <select id="moneyAmount" name="moneyAmount">
-                        <option value="10">10 $</option>
-                        <option value="50">50 $</option>
-                        <option value="100">100 $</option>
-                        <option value="250">250 $</option>
-                        <option value="500">500 $</option>
-                        <option value="1000">1000 $</option>
-                    </select>
-                </div>
-                
-                <div class="form-group" id="foodOptions" style="display:none;">
-                    <label for="foodItem">Select Food Item</label>
-                    <select id="foodItem" name="foodItem">
-                        <option value="Bread">Bread</option>
-                        <option value="Milk">Milk</option>
-                        <option value="Water">Water</option>
-                        <option value="Eggs">Eggs</option>
-                        <option value="Meat">Meat</option>
-                        <option value="Sugar">Sugar</option>
-                        <option value="Oil">Oil</option>
-                        <option value="Flour">Flour</option>
-                        <option value="Salt">Salt</option>
-                        <option value="Butter">Butter</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="submit-btn">Submit the donation</button>
+                <button type="submit" class="submit-btn">Submit Application</button>
             </form>
         </div>
     </div>

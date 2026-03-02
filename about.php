@@ -11,9 +11,9 @@
         <h1 class="main-title">About Us 🌾</h1>
         
         <nav class="navbar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="contact.html" class="nav-link">Contact Us</a>
-            <a href="roles-dashboard.html" class="nav-link">More</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="contact.php" class="nav-link">Contact Us</a>
+            <a href="roles-dashboard.php" class="nav-link">More</a>
         </nav>
         
         <div class="about-content">

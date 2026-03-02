@@ -11,9 +11,9 @@
         <h1 class="main-title">Nutrioza 🌾</h1>
         
         <nav class="navbar">
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="contact.html" class="nav-link">Contact Us</a>
-            <a href="roles-dashboard.html" class="nav-link">More</a>
+            <a href="about.php" class="nav-link">About Us</a>
+            <a href="contact.php" class="nav-link">Contact Us</a>
+            <a href="roles-dashboard.php" class="nav-link">More</a>
         </nav>
         
         <div class="hero-section">

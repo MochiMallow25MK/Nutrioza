@@ -11,15 +11,15 @@
         <h1 class="main-title">Contact Us 🌾</h1>
         
         <nav class="navbar">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About Us</a>
-            <a href="roles-dashboard.html" class="nav-link">More</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="about.php" class="nav-link">About Us</a>
+            <a href="roles-dashboard.php" class="nav-link">More</a>
         </nav>
         
         <div class="contact-container">
             <div class="contact-form-section">
                 <h2>Any questions or remarks? Just write us a message!</h2>
-                <form id="contactForm">
+                <form id="contactForm" method="POST" action="">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
