@@ -338,3 +338,59 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.icons-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #31694E;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.icon-circle:hover {
+    transform: scale(1.1);
+    border-color: #FFCF50;
+}
+
+.icon-image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: #31694E;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .icons-section {
+        gap: 10px;
+    }
+    
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .arrow {
+        font-size: 1.5rem;
+    }
+}
