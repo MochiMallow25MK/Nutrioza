@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">Nutrioza roles dashboard 🌾</h1>
+        <h1 class="main-title">Roles dashboard 🌾</h1>
         
         <nav class="navbar">
             <a href="index.php" class="nav-link">Home</a>
