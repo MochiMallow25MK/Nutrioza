@@ -18,7 +18,7 @@
         
         <div class="contact-container">
             <div class="contact-form-section">
-                <h2>Any questions or remarks? Just write us a message!</h2>
+                <h2>Any questions or remarks ? Just write us a message !</h2>
                 <form id="contactForm" method="POST" action="">
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -34,18 +34,18 @@
             
             <div class="contact-info-section">
                 <div class="info-block">
-                    <h3>ABOUT CLUB</h3>
-                    <p>Running Guide Workouts</p>
+                    <h3>About Nutrioza</h3>
+                    <p>Food Distribution Management Company</p>
                 </div>
                 <div class="info-block">
-                    <h3>PHONE (LANDLINE)</h3>
-                    <p>+ 912 3 567 8987</p>
-                    <p>+ 912 5 252 3336</p>
+                    <h3>Phone (Landline)</h3>
+                    <p>+ 20 123 4567890</p>
+                    <p>+ 20 098 7654321</p>
                 </div>
                 <div class="info-block">
-                    <h3>OUR OFFICE LOCATION</h3>
-                    <p>The Interior Design Studio Company</p>
-                    <p>The Courtyard, Al Quoz 1, Colorado, USA</p>
+                    <h3>Our Company's Location</h3>
+                    <p>Smart Villages Development and Management Company</p>
+                    <p>Building B19, Kerdasa, Giza Governorate 12577, Egypt</p>
                 </div>
             </div>
         </div>
