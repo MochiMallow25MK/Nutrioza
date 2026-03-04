@@ -1,0 +1,115 @@
+.public-header {
+    background: linear-gradient(135deg, #31694E 0%, #658C58 100%);
+    color: #FEFAE0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.public-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFCF50;
+}
+
+.public-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    color: #31694E;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #626F47;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about-stat {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #C7EABB 0%, #F0E491 100%);
+    border-radius: 10px;
+}
+
+.about-stat h3 {
+    color: #31694E;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    color: #31694E;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.donation-form, .volunteer-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #FEFAE0 0%, #C7EABB 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.donation-form h2, .volunteer-form h2 {
+    color: #31694E;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.feature-box h3 {
+    color: #31694E;
+    margin: 15px 0;
+}
+
+.feature-box i {
+    font-size: 3rem;
+    color: #FFCF50;
+}
