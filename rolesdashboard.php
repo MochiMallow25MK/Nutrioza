@@ -1,42 +1,48 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Roles Dashboard - Nutrioza</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrioza - Roles Dashboard</title>
+
+    <!-- Vidaloka font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="rolesdashboard.css">
 </head>
 <body>
-    <h1 class="dashboard-title">Nutrioza Roles Dashboard</h1>
-    
-    <div class="cards-container">
-        <div class="role-card" onclick="location.href='login.php?role=Admin'">
-            <h3>Admin</h3>
-            <p>Full system access and user management</p>
-        </div>
-        
-        <div class="role-card" onclick="location.href='login.php?role=Manager'">
-            <h3>Manager</h3>
-            <p>Manage food items and categories</p>
-        </div>
-        
-        <div class="role-card" onclick="location.href='login.php?role=Warehouse Staff'">
-            <h3>Warehouse Staff</h3>
-            <p>Manage distributions and recipients</p>
-        </div>
-        
-        <div class="role-card" onclick="location.href='login.php?role=Supplier'">
-            <h3>Supplier</h3>
-            <p>Manage supplier information and purchase orders</p>
-        </div>
-        
-        <div class="role-card" onclick="location.href='login.php?role=Viewer'">
-            <h3>Viewer</h3>
-            <p>Generate and view reports</p>
-        </div>
-        
-        <div class="role-card" onclick="location.href='login.php?role=Public User'">
-            <h3>Public User</h3>
-            <p>Submit donation and volunteer forms</p>
+    <div class="container">
+        <!-- Main title -->
+        <h1 class="main-title">Roles Dashboard🌾</h1>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="homepage.php" class="nav-link">Home</a>
+            <a href="about.php" class="nav-link">About Us</a>
+            <a href="contact.php" class="nav-link">Contact Us</a>
+        </nav>
+
+        <!-- Cards -->
+        <div class="cards-container">
+            <div class="role-card" onclick="location.href='login.php?role=Admin'">
+                <h3>Admin</h3>
+            </div>
+            <div class="role-card" onclick="location.href='login.php?role=Manager'">
+                <h3>Manager</h3>
+            </div>
+            <div class="role-card" onclick="location.href='login.php?role=Viewer'">
+                <h3>Viewer</h3>
+            </div>
+            <div class="role-card" onclick="location.href='login.php?role=Warehouse Staff'">
+                <h3>Warehouse Staff</h3>
+            </div>
+            <div class="role-card" onclick="location.href='login.php?role=Supplier'">
+                <h3>Supplier</h3>
+            </div>
+            <div class="role-card" onclick="location.href='login.php?role=Guest'">
+                <h3>Guest (User)</h3>
+            </div>
         </div>
     </div>
 </body>
