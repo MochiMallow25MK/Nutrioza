@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FEFAE0;
+}
+
+.dashboard-title {
+    text-align: center;
+    color: #31694E;
+    font-size: 36px;
+    margin: 40px 0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.role-card {
+    background: linear-gradient(135deg, #84B179, #31694E);
+    border-radius: 10px;
+    padding: 30px;
+    color: #FEFAE0;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(49, 105, 78, 0.3);
+}
+
+.role-card h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #FFCF50;
+}
+
+.role-card p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
