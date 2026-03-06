@@ -3,10 +3,11 @@
 <html>
 <head>
     <title>Nutrioza - Food Distribution System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    <h1 class="title">NUTRIOZA</h1>
+    <h1 class="title">NUTRIOZA🌾</h1>
     
     <nav class="navbar">
         <a href="about.php">About Us</a>
