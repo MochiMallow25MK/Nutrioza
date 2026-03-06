@@ -35,7 +35,6 @@ $role = $_SESSION['role'];
                 <?php elseif ($role == 'Viewer'): ?>
                     <li><a href="stock_report.php" target="workarea">Stock Report</a></li>
                     <li><a href="distribution_report.php" target="workarea">Distribution History Report</a></li>
-                    <li><a href="supplier_report.php" target="workarea">Supplier Performance Report</a></li>
                 <?php elseif ($role == 'Public User'): ?>
                     <li><a href="donationform.php" target="workarea">Submit Donation Form</a></li>
                     <li><a href="volunteeringform.php" target="workarea">Submit Volunteering Form</a></li>
