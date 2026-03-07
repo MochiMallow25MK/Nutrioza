@@ -27,7 +27,6 @@ $role = $_SESSION['role'];
                     <li><a href="categories_index.php" target="workarea">Manage Categories</a></li>
                 <?php elseif ($role == 'Supplier'): ?>
                     <li><a href="suppliers_index.php" target="workarea">Manage Suppliers</a></li>
-                    <li><a href="purchase_orders.php" target="workarea">Generate Purchase Orders</a></li>
                 <?php elseif ($role == 'Warehouse Staff'): ?>
                     <li><a href="distributions_index.php" target="workarea">Manage Distributions</a></li>
                     <li><a href="distribution_details_index.php" target="workarea">Manage Distribution Details</a></li>
