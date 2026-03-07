@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+
+    <?php if (isset($_GET['success'])): ?>
+        <div style="background-color: #84B179; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 5px; max-width: 1200px; margin: 20px auto;">
+            Thank you for contacting us ! We'll get back to you soon.
+        </div>
+    <?php elseif (isset($_GET['error'])): ?>
+        <div style="background-color: #ff4444; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 5px; max-width: 1200px; margin: 20px auto;">
+            Something went wrong ! Please try again.
+        </div>
+    <?php endif; ?>
+
     <div class="container">
         <h1 class="main-title">Contact Us🌾</h1>
 
