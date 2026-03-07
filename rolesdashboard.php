@@ -40,8 +40,8 @@
             <div class="role-card" onclick="location.href='login.php?role=Supplier'">
                 <h3>Supplier</h3>
             </div>
-            <div class="role-card" onclick="location.href='login.php?role=Guest'">
-                <h3>Guest (User)</h3>
+            <div class="role-card" onclick="location.href='login.php?role=Public User'">
+                <h3>Public User</h3>
             </div>
         </div>
     </div>
