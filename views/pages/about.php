@@ -5,27 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrioza - About Us</title>
-
-    <!-- Vidaloka font -->
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="/Nutrioza/public/css/about.css">
 </head>
 <body>
-
 <div class="container">
-
-    <!-- Page Title -->
     <h1 class="main-title">About Us🌾</h1>
-
-    <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="homepage.php" class="nav-link">Home</a>
-        <a href="contact.php" class="nav-link">Contact Us</a>
-        <a href="rolesdashboard.php" class="nav-link">Roles Dashboard</a>
+        <a href="/Nutrioza/public/index.php?page=home" class="nav-link">Home</a>
+        <a href="/Nutrioza/public/index.php?page=contact" class="nav-link">Contact Us</a>
+        <a href="/Nutrioza/public/index.php?page=roles-dashboard" class="nav-link">Roles Dashboard</a>
     </nav>
-
-    <!-- About Content -->
     <div class="about-content">
         <h2 class="about-subtitle">Smart, transparent and efficient platform</h2>
         <p class="about-text">
@@ -34,8 +24,6 @@
             of integrated logistics and real-time inventory management, a new era of food security
             is taking place, and we aim to play a fundamental and key role in this transformation.
         </p>
-
-        <!-- Stats Cards -->
         <div class="stats-container">
             <div class="stat-card">
                 <h3>Number Of Transactions</h3>
@@ -51,7 +39,6 @@
             </div>
         </div>
     </div>
-
 </div>
 </body>
 </html>

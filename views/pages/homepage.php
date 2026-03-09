@@ -4,15 +4,15 @@
 <head>
     <title>Nutrioza - Food Distribution System</title>
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="/Nutrioza/public/css/homepage.css">
 </head>
 <body>
     <h1 class="title">NUTRIOZA🌾</h1>
     
     <nav class="navbar">
-        <a href="about.php">About Us</a>
-        <a href="contact.php">Contact Us</a>
-        <a href="rolesdashboard.php">Roles Dashboard</a>
+        <a href="/Nutrioza/public/index.php?page=about">About Us</a>
+        <a href="/Nutrioza/public/index.php?page=contact">Contact Us</a>
+        <a href="/Nutrioza/public/index.php?page=roles-dashboard">Roles Dashboard</a>
     </nav>
     
     <div class="container">
@@ -20,22 +20,22 @@
         
         <div class="icons-container">
             <div class="icon-item">
-                <img src="icon 1.png" alt="Food Collection">
+                <img src="/Nutrioza/public/assets/icon1.png" alt="Food Collection">
                 <span>Food Collection</span>
             </div>
             <span class="arrow">→</span>
             <div class="icon-item">
-                <img src="icon 2.png" alt="Inventory Storage">
+                <img src="/Nutrioza/public/assets/icon2.png" alt="Inventory Storage">
                 <span>Inventory Storage</span>
             </div>
             <span class="arrow">→</span>
             <div class="icon-item">
-                <img src="icon 3.png" alt="Distribution">
+                <img src="/Nutrioza/public/assets/icon3.png" alt="Distribution">
                 <span>Distribution</span>
             </div>
             <span class="arrow">→</span>
             <div class="icon-item">
-                <img src="icon 4.png" alt="Community Impact">
+                <img src="/Nutrioza/public/assets/icon4.png" alt="Community Impact">
                 <span>Community Impact</span>
             </div>
         </div>
