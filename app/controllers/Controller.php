@@ -1,5 +1,14 @@
 <?php
+require_once __DIR__ . '/../config/config.php';
+
 class Controller {
+    protected $db;
+
+    public function __construct() {
+        global $link;
+        $this->db = $link;
+    }
+
     protected function view($view, $data = []) {
         extract($data);
         

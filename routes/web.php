@@ -16,50 +16,29 @@ return [
         require_once BASE_PATH . '/views/pages/contact.php';
     },
     
-    '/submit-contact' => function() {
-        require_once BASE_PATH . '/app/controllers/submit_contact.php';
-    },
+    '/submit-contact' => 'FormController@submitContact',
     
-    '/dashboard' => function() {
-        require_once BASE_PATH . '/views/dashboard/rolesdashboard.php';
-    },
+    '/roles-dashboard' => 'AuthController@rolesDashboard',
     
-    '/login' => function() {
-        $role = $_GET['role'] ?? '';
-        require_once BASE_PATH . '/views/auth/login.php';
-    },
+    '/login' => 'AuthController@login',
     
-    '/authenticate' => function() {
-        require_once BASE_PATH . '/app/controllers/authenticate.php';
-    },
+    '/authenticate' => 'AuthController@authenticate',
     
-    '/workspace' => function() {
-        require_once BASE_PATH . '/views/dashboard/workspace.php';
-    },
+    '/workspace' => 'AuthController@workspace',
     
-    '/logout' => function() {
-        require_once BASE_PATH . '/app/controllers/logout.php';
-    },
+    '/logout' => 'AuthController@logout',
     
     '/welcome' => function() {
         require_once BASE_PATH . '/views/pages/welcome.php';
     },
     
-    '/donation-form' => function() {
-        require_once BASE_PATH . '/views/forms/donationform.php';
-    },
+    '/donation-form' => 'FormController@showDonationForm',
     
-    '/volunteer-form' => function() {
-        require_once BASE_PATH . '/views/forms/volunteeringform.php';
-    },
+    '/volunteer-form' => 'FormController@showVolunteerForm',
     
-    '/submit-donation' => function() {
-        require_once BASE_PATH . '/app/controllers/submit_donation.php';
-    },
+    '/submit-donation' => 'FormController@submitDonation',
     
-    '/submit-volunteer' => function() {
-        require_once BASE_PATH . '/app/controllers/submit_volunteer.php';
-    },
+    '/submit-volunteer' => 'FormController@submitVolunteer',
     
     '/stock-report' => function() {
         require_once BASE_PATH . '/views/reports/stock_report.php';
@@ -67,10 +46,6 @@ return [
     
     '/distribution-report' => function() {
         require_once BASE_PATH . '/views/reports/distribution_report.php';
-    },
-    
-    '/supplier-report' => function() {
-        require_once BASE_PATH . '/views/reports/supplier_report.php';
     },
     
     // Users Routes
@@ -99,6 +74,8 @@ return [
     '/donations/(\d+)/edit' => 'DonationsController@edit',
     '/donations/(\d+)/update' => 'DonationsController@update',
     '/donations/(\d+)/delete' => 'DonationsController@destroy',
+    '/donations/(\d+)/approve' => 'DonationsController@approve',
+    '/donations/(\d+)/reject' => 'DonationsController@reject',
     
     // Volunteers Routes
     '/volunteers' => 'VolunteersController@index',
@@ -108,6 +85,8 @@ return [
     '/volunteers/(\d+)/edit' => 'VolunteersController@edit',
     '/volunteers/(\d+)/update' => 'VolunteersController@update',
     '/volunteers/(\d+)/delete' => 'VolunteersController@destroy',
+    '/volunteers/(\d+)/approve' => 'VolunteersController@approve',
+    '/volunteers/(\d+)/reject' => 'VolunteersController@reject',
     
     // Food Items Routes
     '/food-items' => 'FoodItemsController@index',
@@ -117,6 +96,8 @@ return [
     '/food-items/(\d+)/edit' => 'FoodItemsController@edit',
     '/food-items/(\d+)/update' => 'FoodItemsController@update',
     '/food-items/(\d+)/delete' => 'FoodItemsController@destroy',
+    '/food-items/low-stock' => 'FoodItemsController@lowStock',
+    '/food-items/near-expiry' => 'FoodItemsController@nearExpiry',
     
     // Categories Routes
     '/categories' => 'CategoriesController@index',
@@ -126,6 +107,7 @@ return [
     '/categories/(\d+)/edit' => 'CategoriesController@edit',
     '/categories/(\d+)/update' => 'CategoriesController@update',
     '/categories/(\d+)/delete' => 'CategoriesController@destroy',
+    '/categories/stats' => 'CategoriesController@stats',
     
     // Suppliers Routes
     '/suppliers' => 'SuppliersController@index',
@@ -136,6 +118,7 @@ return [
     '/suppliers/(\d+)/update' => 'SuppliersController@update',
     '/suppliers/(\d+)/delete' => 'SuppliersController@destroy',
     '/purchase-orders' => 'SuppliersController@purchaseOrders',
+    '/suppliers/performance' => 'SuppliersController@performance',
     
     // Distributions Routes
     '/distributions' => 'DistributionsController@index',
@@ -145,6 +128,9 @@ return [
     '/distributions/(\d+)/edit' => 'DistributionsController@edit',
     '/distributions/(\d+)/update' => 'DistributionsController@update',
     '/distributions/(\d+)/delete' => 'DistributionsController@destroy',
+    '/distributions/(\d+)/approve' => 'DistributionsController@approve',
+    '/distributions/(\d+)/deliver' => 'DistributionsController@deliver',
+    '/distributions/(\d+)/add-items' => 'DistributionsController@addItems',
     
     // Distribution Details Routes
     '/distribution-details' => 'DistributionDetailsController@index',
@@ -154,6 +140,7 @@ return [
     '/distribution-details/(\d+)/edit' => 'DistributionDetailsController@edit',
     '/distribution-details/(\d+)/update' => 'DistributionDetailsController@update',
     '/distribution-details/(\d+)/delete' => 'DistributionDetailsController@destroy',
+    '/distributions/(\d+)/details' => 'DistributionDetailsController@byDistribution',
     
     // Recipients Routes
     '/recipients' => 'RecipientsController@index',
@@ -163,5 +150,6 @@ return [
     '/recipients/(\d+)/edit' => 'RecipientsController@edit',
     '/recipients/(\d+)/update' => 'RecipientsController@update',
     '/recipients/(\d+)/delete' => 'RecipientsController@destroy',
+    '/recipients/type/([^/]+)' => 'RecipientsController@byType',
 ];
 ?>
