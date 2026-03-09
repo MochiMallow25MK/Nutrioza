@@ -4,7 +4,7 @@
 <head>
     <title>Nutrioza - Food Distribution System</title>
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Nutrioza/public/css/homepage.css">
+   <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/homepage.css">
 </head>
 <body>
     <h1 class="title">NUTRIOZA🌾</h1>
