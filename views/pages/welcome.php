@@ -6,7 +6,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'User';
 <html>
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet" href="/Nutrioza/public/css/table.css">
+    <link rel="stylesheet" href="/SEProject\Nutrioza\Nutrioza\public\css\table.css">
 </head>
 <body style="padding: 20px; text-align: center;">
     <h1 style="color: #31694E;">Welcome to Nutrioza</h1>

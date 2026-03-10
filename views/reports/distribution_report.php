@@ -24,7 +24,7 @@ $result = mysqli_query($link, $sql);
 <html>
 <head>
     <title>Distribution Report</title>
-    <link rel="stylesheet" href="/Nutrioza/public/css/table.css">
+    <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/table.css">
     <style>
         .report-header { background-color: #31694E; color: #FEFAE0; padding: 20px; margin-bottom: 20px; }
         .filter-form { background-color: #C7EABB; padding: 20px; margin-bottom: 20px; border-radius: 5px; }
@@ -129,7 +129,7 @@ $result = mysqli_query($link, $sql);
     
     <div class="no-print" style="margin-top: 20px;">
         <button onclick="window.print()" class="print-btn">Print Report</button>
-        <a href="/Nutrioza/public/index.php?page=workspace" class="back-link">Back to Workspace</a>
+        <a href="/SEProject/Nutrioza/Nutrioza/public/workspace.php?page=workspace" class="back-link">Back to Workspace</a>
     </div>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <html>
 <head>
     <title>Volunteering Form - Nutrioza</title>
-    <link rel="stylesheet" href="/Nutrioza/public/css/form.css">
-    <script src="/Nutrioza/public/js/form_validation.js"></script>
+    <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/form.css">
+    <script src="/SEProject/Nutrioza/Nutrioza/public/js/form_validation.js"></script>
 </head>
 <body>
     <div class="form-container">
         <h2>Become a Volunteer</h2>
         
-        <form action="/Nutrioza/public/index.php?page=submit-volunteer" method="POST">
+        <form action="/SEProject/Nutrioza/Nutrioza/public/index.php?page=submit-volunteer" method="POST">
             <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" id="full_name" name="full_name">
@@ -44,7 +44,7 @@
             <button type="submit">Submit Application</button>
         </form>
         
-        <a href="/Nutrioza/public/index.php?page=workspace" class="back-link">Back to Workspace</a>
+        <a href="/SEProject\Nutrioza\Nutrioza\views\dashboard\workspace.php?page=workspace" class="back-link">Back to Workspace</a>
     </div>
 </body>
 </html>

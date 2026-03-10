@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrioza - About Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Nutrioza/public/css/about.css">
+    <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/about.css">
 </head>
 <body>
 <div class="container">
     <h1 class="main-title">About Us🌾</h1>
     <nav class="navbar">
-        <a href="/Nutrioza/public/index.php?page=home" class="nav-link">Home</a>
-        <a href="/Nutrioza/public/index.php?page=contact" class="nav-link">Contact Us</a>
-        <a href="/Nutrioza/public/index.php?page=roles-dashboard" class="nav-link">Roles Dashboard</a>
+        <a href="/Nutrioza/views\pages\homepage.php?page=home">Home</a>
+        <a href="/Nutrioza/views\pages\contact.php?page=contact">Contact Us</a>
+        <a href="/Nutrioza/views\pages\rolesdashboard.php?page=roles-dashboard">Roles Dashboard</a>
     </nav>
     <div class="about-content">
         <h2 class="about-subtitle">Smart, transparent and efficient platform</h2>

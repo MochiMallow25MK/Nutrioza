@@ -7,8 +7,8 @@ $role = isset($_GET['role']) ? $_GET['role'] : '';
 <head>
     <title>Login - Nutrioza</title>
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Nutrioza/public/css/login.css">
-    <script src="/Nutrioza/public/js/login_validation.js"></script>
+    <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/login.css">
+    <script src="/SEProject/Nutrioza/Nutrioza/public/js/login_validation.js"></script>
 </head>
 <body>
     <div class="login-container">
@@ -16,7 +16,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : '';
             <h2>Welcome back !</h2>
             <p class="role-text"><?php echo $role; ?> Login</p>
             
-            <form id="loginForm" onsubmit="return validateLoginForm()" action="/Nutrioza/public/index.php?page=authenticate" method="POST">
+            <form id="loginForm" onsubmit="return validateLoginForm()" action="/SEProject/Nutrioza/Nutrioza/public/index.php?page=authenticate" method="POST">
                 <input type="hidden" name="role" value="<?php echo $role; ?>">
                 
                 <div class="form-group">
@@ -34,7 +34,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : '';
                 <button type="submit">Sign in</button>
                 
                 <div class="links">
-                    <a href="/Nutrioza/public/index.php?page=roles-dashboard">Go back</a>
+                    <a href="/SEProject/Nutrioza/Nutrioza/views/pages/rolesdashboard.php?page=roles-dashboard">Go back</a>
                 </div>
             </form>
         </div>
