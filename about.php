@@ -12,9 +12,9 @@
 <div class="container">
     <h1 class="main-title">About Us 🌾</h1>
     <nav class="navbar">
-        <a href="homepage.php">Home</a>
-        <a href="contact.php">Contact Us</a>
-        <a href="rolesdashboard.php">Roles Dashboard</a>
+        <a href="homepage.php" class="nav-link">Home</a>
+        <a href="contact.php" class="nav-link">Contact Us</a>
+        <a href="rolesdashboard.php" class="nav-link">Roles Dashboard</a>
     </nav>
     <div class="about-content">
         <h2 class="about-subtitle">Smart, transparent and efficient platform</h2>

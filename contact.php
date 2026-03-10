@@ -22,14 +22,14 @@
     <div class="container">
         <h1 class="main-title">Contact Us 🌾</h1>
         <nav class="navbar">
-            <a href="homepage.php">Home</a>
-            <a href="about.php">About Us</a>
-            <a href="rolesdashboard.php">Roles Dashboard</a>
+            <a href="homepage.php" class="nav-link">Home</a>
+            <a href="about.php" class="nav-link">About Us</a>
+            <a href="rolesdashboard.php" class="nav-link">Roles Dashboard</a>
         </nav>
         <div class="contact-container">
             <div class="contact-form-section">
                 <h2>Any questions or remarks? Just write us a message!</h2>
-                <form id="contactForm" method="POST" action="/Nutrioza/public/index.php?page=submit-contact">
+                <form id="contactForm" method="POST" action="submit_contact.php">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>

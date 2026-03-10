@@ -6,13 +6,14 @@ $role = isset($_GET['role']) ? $_GET['role'] : '';
 <html>
 <head>
     <title>Login - Nutrioza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
     <script src="login_validation.js"></script>
 </head>
 <body>
     <div class="login-container">
         <div class="login-box">
-            <h2>Welcome Back</h2>
+            <h2>Welcome back !</h2>
             <p class="role-text"><?php echo $role; ?> Login</p>
             
             <form id="loginForm" onsubmit="return validateLoginForm()" action="authenticate.php" method="POST">
@@ -33,7 +34,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : '';
                 <button type="submit">Sign in</button>
                 
                 <div class="links">
-                    <a href="homepage.php">Go back</a>
+                    <a href="rolesdashboard.php">Go back</a>
                 </div>
             </form>
         </div>

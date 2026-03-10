@@ -27,7 +27,6 @@ $role = $_SESSION['role'];
                     <li><a href="categories_index.php" target="workarea">Manage Categories</a></li>
                 <?php elseif ($role == 'Supplier'): ?>
                     <li><a href="suppliers_index.php" target="workarea">Manage Suppliers</a></li>
-                    <li><a href="purchase_orders.php" target="workarea">Generate Purchase Orders</a></li>
                 <?php elseif ($role == 'Warehouse Staff'): ?>
                     <li><a href="distributions_index.php" target="workarea">Manage Distributions</a></li>
                     <li><a href="distribution_details_index.php" target="workarea">Manage Distribution Details</a></li>
@@ -35,7 +34,6 @@ $role = $_SESSION['role'];
                 <?php elseif ($role == 'Viewer'): ?>
                     <li><a href="stock_report.php" target="workarea">Stock Report</a></li>
                     <li><a href="distribution_report.php" target="workarea">Distribution History Report</a></li>
-                    <li><a href="supplier_report.php" target="workarea">Supplier Performance Report</a></li>
                 <?php elseif ($role == 'Public User'): ?>
                     <li><a href="donationform.php" target="workarea">Submit Donation Form</a></li>
                     <li><a href="volunteeringform.php" target="workarea">Submit Volunteering Form</a></li>
