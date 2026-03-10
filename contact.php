@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrioza - Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/contact.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <?php if (isset($_GET['success'])): ?>
         <div style="background-color: #84B179; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 5px; max-width: 1200px; margin: 20px auto;">
-            Thank you for contacting us ! We'll get back to you soon.
+            Thank you for contacting us! We'll get back to you soon.
         </div>
     <?php elseif (isset($_GET['error'])): ?>
         <div style="background-color: #ff4444; color: white; padding: 15px; text-align: center; margin-bottom: 20px; border-radius: 5px; max-width: 1200px; margin: 20px auto;">
-            Something went wrong ! Please try again.
+            Something went wrong. Please try again.
         </div>
     <?php endif; ?>
 
     <div class="container">
-        <h1 class="main-title">Contact Us🌾</h1>
+        <h1 class="main-title">Contact Us 🌾</h1>
         <nav class="navbar">
-            <a href="/Nutrioza/views\pages\homepage.php?page=home">Home</a>
-            <a href="/Nutrioza/views\pages\about.php?page=about">About Us</a>
-            <a href="/Nutrioza/views\pages\rolesdashboard.php?page=roles-dashboard">Roles Dashboard</a>
+            <a href="homepage.php">Home</a>
+            <a href="about.php">About Us</a>
+            <a href="rolesdashboard.php">Roles Dashboard</a>
         </nav>
         <div class="contact-container">
             <div class="contact-form-section">

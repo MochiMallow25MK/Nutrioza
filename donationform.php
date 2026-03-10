@@ -3,14 +3,14 @@
 <html>
 <head>
     <title>Donation Form - Nutrioza</title>
-    <link rel="stylesheet" href="/SEProject/Nutrioza/Nutrioza/public/css/form.css">
-    <script src="/SEProject/Nutrioza/Nutrioza/public/js/form_validation.js"></script>
+    <link rel="stylesheet" href="form.css">
+    <script src="form_validation.js"></script>
 </head>
 <body>
     <div class="form-container">
         <h2>Make a Donation</h2>
         
-        <form action="/SEProject/Nutrioza/Nutrioza/public/index.php?page=submit-donation" method="POST">
+        <form id="donationForm" onsubmit="return validateDonationForm()" action="submit_donation.php" method="POST">
             <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" id="donor_name" name="donor_name">
@@ -58,7 +58,7 @@
             <button type="submit">Submit Donation</button>
         </form>
         
-        <a href="/SEProject\Nutrioza\Nutrioza\views\dashboard\workspace.php?page=workspace" class="back-link">Back to Workspace</a>
+        <a href="workspace.php" class="back-link">Back to Workspace</a>
     </div>
 </body>
 </html>
