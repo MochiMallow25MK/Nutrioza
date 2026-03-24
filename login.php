@@ -20,14 +20,14 @@ $role = isset($_GET['role']) ? $_GET['role'] : '';
                 <input type="hidden" name="role" value="<?php echo $role; ?>">
                 
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" id="username" name="username" placeholder="giga@example.com">
+                    <label>Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
                     <span id="usernameError" class="error"></span>
                 </div>
                 
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
                     <span id="passwordError" class="error"></span>
                 </div>
                 
