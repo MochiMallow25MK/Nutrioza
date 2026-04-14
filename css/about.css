@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('../css/style.css');
+
+.about-content {
+    margin-top: 32px;
+}
+
+.about-subtitle {
+    font-size: 1.3rem;
+    color: var(--green-mid);
+    margin-bottom: 16px;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--text-mid);
+    max-width: 750px;
+}

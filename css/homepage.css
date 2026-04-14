@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('../css/style.css');
+
+.hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 60px 20px 48px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: var(--green-3);
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 0 20px 40px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 2px solid var(--green-2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    min-width: 130px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dark);
+}
+
+.icon-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: var(--green-mid);
+}

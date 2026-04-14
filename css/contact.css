@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('../css/style.css');
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.contact-form-section {
+    flex: 2;
+    min-width: 280px;
+}
+
+.contact-form-section h2 {
+    font-size: 1.1rem;
+    color: var(--green-mid);
+    margin-bottom: 20px;
+}
+
+.contact-info-section {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-block {
+    background: var(--green-3);
+    border-radius: 8px;
+    padding: 16px 18px;
+    border: 1px solid var(--green-2);
+}
+
+.info-block h3 {
+    font-size: 14px;
+    color: var(--green-dark);
+    margin-bottom: 6px;
+}
+
+.info-block p {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.6;
+}

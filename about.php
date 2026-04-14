@@ -1,0 +1,59 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrioza - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+<script>alert('Welcome to About Us!');</script>
+
+<nav class="navbar">
+    <a href="homepage.php">Home</a>
+    <a href="contact.php">Contact Us</a>
+    <a href="donation_form.php">Donations</a>
+    <a href="volunteering_form.php">Volunteering</a>
+    <a href="management.php">Management</a>
+</nav>
+
+<div class="container">
+    <h1 class="page-title">About Us 🌾</h1>
+
+    <div class="card about-content">
+        <h2 class="about-subtitle">Smart, transparent and efficient platform</h2>
+        <p class="about-text">
+            The global food industry is evolving from a fragmented, manual, and wasteful state to a data-driven,
+            streamlined, and sustainable one. We believe that with the rise of integrated logistics and real-time
+            inventory management, a new era of food security is taking place, and we aim to play a fundamental
+            and key role in this transformation.
+        </p>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Number Of Transactions</h3>
+                <p class="stat-number">26,000</p>
+            </div>
+            <div class="stat-card">
+                <h3>Established Year</h3>
+                <p class="stat-number">2026</p>
+            </div>
+            <div class="stat-card">
+                <h3>Number Of Users</h3>
+                <p class="stat-number">2,600</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 class="about-subtitle">Our Location</h2>
+        <p class="about-text">
+            Smart Villages Development and Management Company<br>
+            Building B19, Kerdasa, Giza Governorate 12577, Egypt
+        </p>
+    </div>
+</div>
+</body>
+</html>
