@@ -11,7 +11,7 @@ class HomepageView {
                food waste and fighting hunger. We connect food suppliers with those in need through
                efficient inventory tracking, distribution management, and community engagement.</p>
         </div>
-
+        
         <nav class="navbar">
             <a href="about.php">About Us</a>
             <a href="contact.php">Contact Us</a>

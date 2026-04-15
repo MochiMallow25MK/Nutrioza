@@ -32,19 +32,20 @@ body {
 }
 
 /* ── Navbar ───────────────────────────────────────────── */
-.navbar {
+.navbar { 
     background-color: var(--green-dark);
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 32px;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px 0;
     flex-wrap: wrap;
 }
 
 .navbar a {
     color: var(--cream);
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 8px 20px;
     border-radius: 6px;
     font-size: 15px;
     transition: background 0.2s;

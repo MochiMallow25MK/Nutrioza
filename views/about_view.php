@@ -40,14 +40,6 @@ class AboutView {
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <h2 class="about-subtitle">Our Location</h2>
-                <p class="about-text">
-                    Smart Villages Development and Management Company<br>
-                    Building B19, Kerdasa, Giza Governorate 12577, Egypt
-                </p>
-            </div>
         </div>
         <?php
     }

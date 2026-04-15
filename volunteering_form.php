@@ -20,7 +20,7 @@
 </nav>
 
 <div class="container">
-    <h1 class="page-title">Volunteer With Us 🌾</h1>
+    <h1 class="page-title">Volunteer with Us 🌾</h1>
 
     <?php if (isset($_GET['success'])): ?>
         <div class="alert alert-success">Form submitted successfully! We'll be in touch soon.</div>
@@ -44,8 +44,8 @@
             </div>
 
             <div class="form-group">
-                <label for="volunteer_phone">Phone Number</label>
-                <input type="text" id="volunteer_phone" name="volunteer_phone" placeholder="e.g. +20 123 4567890">
+                <label for="volunteer_phone_number">Phone Number</label>
+                <input type="text" id="volunteer_phone_number" name="volunteer_phone_number" placeholder="e.g. +20 123 4567890">
                 <span class="error-msg" id="phoneErr">Phone number is required.</span>
             </div>
 
@@ -88,7 +88,7 @@ document.getElementById('volunteerForm').addEventListener('submit', function(e) 
 
     if (!document.getElementById('volunteer_name').value.trim())   fail('volunteer_name',  'nameErr');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('volunteer_email').value.trim())) fail('volunteer_email', 'emailErr');
-    if (!document.getElementById('volunteer_phone').value.trim())  fail('volunteer_phone', 'phoneErr');
+    if (!document.getElementById('volunteer_phone_number').value.trim())  fail('volunteer_phone_number', 'phoneErr');
     if (!document.getElementById('availability').value)            fail('availability',    'availErr');
     if (!document.getElementById('skills').value.trim())           fail('skills',          'skillsErr');
 

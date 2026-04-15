@@ -52,7 +52,8 @@ class ContactView {
                     </div>
                     <div class="info-block">
                         <h3>Our Location</h3>
-                        <p>Building B19, Kerdasa, Giza Governorate 12577, Egypt</p>
+                        <p>Smart Villages Development and Management Company, 
+                           Building B19, Kerdasa, Giza Governorate 12577, Egypt</p>
                     </div>
                 </div>
             </div>
