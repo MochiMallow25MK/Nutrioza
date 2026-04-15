@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
-require_once __DIR__ . '/../interfaces/IReportable.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/IReportable.php';
 
 class DistributionDetail implements ICrudOperations, IReportable {
     public int    $detail_id;
@@ -49,7 +49,7 @@ class DistributionDetail implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT dd.*, p.product_name, do.order_code FROM distribution_details dd LEFT JOIN product p ON dd.product_id=p.product_id LEFT JOIN distribution_order do ON dd.order_id=do.order_id ORDER BY dd.detail_id DESC");
+        $result = $db->getConnection()->query("SELECT dd.*, p.product_name, do.order_code FROM distribution_details dd LEFT JOIN product p ON dd.product_id=p.product_id LEFT JOIN distribution_order do ON dd.order_id=do.order_id ORDER BY dd.detail_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

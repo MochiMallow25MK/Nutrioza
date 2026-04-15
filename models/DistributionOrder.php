@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
-require_once __DIR__ . '/../interfaces/IReportable.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/IReportable.php';
 
 class DistributionOrder implements ICrudOperations, IReportable {
     public int    $order_id;
@@ -13,9 +13,8 @@ class DistributionOrder implements ICrudOperations, IReportable {
     public string $status;
     public int    $total_items;
     public string $notes;
-    public int    $created_by;
 
-    public function __construct(int $order_id, string $order_code, string $recipient_name, string $recipient_type, string $recipient_contact, string $recipient_address, string $distribution_date, string $status, int $total_items, string $notes, int $created_by) {
+    public function __construct(int $order_id, string $order_code, string $recipient_name, string $recipient_type, string $recipient_contact, string $recipient_address, string $distribution_date, string $status, int $total_items, string $notes) {
         $this->order_id           = $order_id;
         $this->order_code         = $order_code;
         $this->recipient_name     = $recipient_name;
@@ -26,13 +25,12 @@ class DistributionOrder implements ICrudOperations, IReportable {
         $this->status             = $status;
         $this->total_items        = $total_items;
         $this->notes              = $notes;
-        $this->created_by         = $created_by;
     }
 
     public function create(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("INSERT INTO distribution_order (order_code, recipient_name, recipient_type, recipient_contact, recipient_address, distribution_date, status, total_items, notes, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param('sssssssisi', $this->order_code, $this->recipient_name, $this->recipient_type, $this->recipient_contact, $this->recipient_address, $this->distribution_date, $this->status, $this->total_items, $this->notes, $this->created_by);
+        $stmt = $conn->prepare("INSERT INTO distribution_order (order_code, recipient_name, recipient_type, recipient_contact, recipient_address, distribution_date, status, total_items, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('sssssssisi', $this->order_code, $this->recipient_name, $this->recipient_type, $this->recipient_contact, $this->recipient_address, $this->distribution_date, $this->status, $this->total_items, $this->notes);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;
@@ -57,7 +55,7 @@ class DistributionOrder implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT do.*, u.full_name AS created_by_name FROM distribution_order do LEFT JOIN user u ON do.created_by=u.user_id ORDER BY do.distribution_date DESC");
+        $result = $db->getConnection()->query("SELECT do.*, u.full_name AS created_by_name FROM distribution_order do LEFT JOIN user u ON do.created_by=u.user_id ORDER BY do.distribution_date ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

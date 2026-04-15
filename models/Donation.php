@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
-require_once __DIR__ . '/../interfaces/IReportable.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/IReportable.php';
 
 class Donation implements ICrudOperations, IReportable {
     public int    $donation_id;
@@ -45,7 +45,7 @@ class Donation implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM donations ORDER BY submitted_at DESC");
+        $result = $db->getConnection()->query("SELECT * FROM donations ORDER BY submitted_at ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
@@ -62,7 +62,7 @@ class Donation implements ICrudOperations, IReportable {
     }
 
     public static function generateReport(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM donations ORDER BY submitted_at DESC");
+        $result = $db->getConnection()->query("SELECT * FROM donations ORDER BY submitted_at ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

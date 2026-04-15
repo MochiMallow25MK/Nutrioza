@@ -1,26 +1,30 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
-require_once __DIR__ . '/../interfaces/IReportable.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/IReportable.php';
 
 class Recipient implements ICrudOperations, IReportable {
     public int    $recipient_id;
     public string $recipient_name;
-    public string $recipient_type;
-    public string $contact_info;
+    public string $contact_person;
+    public string $phone;
+    public string $email;
     public string $address;
+    public string $city;
 
-    public function __construct(int $recipient_id, string $recipient_name, string $recipient_type, string $contact_info, string $address) {
+    public function __construct(int $recipient_id, string $recipient_name, string $contact_person, string $phone, string $email, string $address, string $city) {
         $this->recipient_id   = $recipient_id;
         $this->recipient_name = $recipient_name;
-        $this->recipient_type = $recipient_type;
-        $this->contact_info   = $contact_info;
+        $this->contact_person = $contact_person;
+        $this->phone          = $phone;
+        $this->email          = $email;
         $this->address        = $address;
+        $this->city           = $city;
     }
 
     public function create(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("INSERT INTO recipients (recipient_name, recipient_type, contact_info, address) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param('ssss', $this->recipient_name, $this->recipient_type, $this->contact_info, $this->address);
+        $stmt = $conn->prepare("INSERT INTO recipients (recipient_name, contact_person, phone, email, address, city) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('ssssss', $this->recipient_name, $this->contact_person, $this->phone, $this->email, $this->address, $this->city);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;
@@ -28,8 +32,8 @@ class Recipient implements ICrudOperations, IReportable {
 
     public function update(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("UPDATE recipients SET recipient_name=?, recipient_type=?, contact_info=?, address=? WHERE recipient_id=?");
-        $stmt->bind_param('ssssi', $this->recipient_name, $this->recipient_type, $this->contact_info, $this->address, $this->recipient_id);
+        $stmt = $conn->prepare("UPDATE recipients SET recipient_name=?, contact_person=?, phone=?, email=?, address=?, city=? WHERE recipient_id=?");
+        $stmt->bind_param('sssssssi', $this->recipient_name, $this->contact_person, $this->phone, $this->email, $this->address, $this->city, $this->recipient_id);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;

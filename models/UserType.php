@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
 
 class UserType implements ICrudOperations {
     public int    $user_type_id;

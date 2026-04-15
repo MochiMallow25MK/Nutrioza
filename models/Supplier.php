@@ -1,27 +1,32 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
 
 class Supplier implements ICrudOperations {
     public int    $supplier_id;
     public string $supplier_name;
     public string $contact_person;
-    public string $contact_email;
-    public string $contact_phone;
+    public string $phone;
+    public string $email;
     public string $address;
+    public string $supplier_type;
+    public int    $is_active;
 
-    public function __construct(int $supplier_id, string $supplier_name, string $contact_person, string $contact_email, string $contact_phone, string $address) {
+
+    public function __construct(int $supplier_id, string $supplier_name, string $contact_person, string $phone, string $email, string $address, string $supplier_type, int $is_active) {
         $this->supplier_id    = $supplier_id;
         $this->supplier_name  = $supplier_name;
         $this->contact_person = $contact_person;
-        $this->contact_email  = $contact_email;
-        $this->contact_phone  = $contact_phone;
+        $this->email          = $email;
+        $this->phone          = $phone;
         $this->address        = $address;
+        $this->supplier_type  = $supplier_type;
+        $this->is_active      = $is_active;
     }
 
     public function create(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("INSERT INTO supplier (supplier_name, contact_person, contact_email, contact_phone, address) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param('sssss', $this->supplier_name, $this->contact_person, $this->contact_email, $this->contact_phone, $this->address);
+        $stmt = $conn->prepare("INSERT INTO supplier (supplier_name, contact_person, phone, email, address, supplier_type, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('sssssii', $this->supplier_name, $this->contact_person, $this->phone, $this->email, $this->address, $this->supplier_type, $this->is_active);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;
@@ -29,8 +34,8 @@ class Supplier implements ICrudOperations {
 
     public function update(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("UPDATE supplier SET supplier_name=?, contact_person=?, contact_email=?, contact_phone=?, address=? WHERE supplier_id=?");
-        $stmt->bind_param('sssssi', $this->supplier_name, $this->contact_person, $this->contact_email, $this->contact_phone, $this->address, $this->supplier_id);
+        $stmt = $conn->prepare("UPDATE supplier SET supplier_name=?, contact_person=?, phone=?, email=?, address=?, supplier_type=?, is_active=? WHERE supplier_id=?");
+        $stmt->bind_param('sssssi', $this->supplier_name, $this->contact_person, $this->phone, $this->email, $this->address, $this->supplier_type, $this->is_active, $this->supplier_id);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;

@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
-require_once __DIR__ . '/../interfaces/IReportable.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/IReportable.php';
 
 class Volunteer implements ICrudOperations, IReportable {
     public int    $volunteer_id;
@@ -21,7 +21,7 @@ class Volunteer implements ICrudOperations, IReportable {
 
     public function create(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("INSERT INTO volunteers (volunteer_name, volunteer_email, volunteer_phone, availability, skills) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO volunteers (volunteer_name, volunteer_email, volunteer_phone_number, volunteer_availability, volunteer_skills) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param('sssss', $this->volunteer_name, $this->volunteer_email, $this->volunteer_phone, $this->availability, $this->skills);
         $ok = $stmt->execute();
         $stmt->close();
@@ -30,7 +30,7 @@ class Volunteer implements ICrudOperations, IReportable {
 
     public function update(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("UPDATE volunteers SET volunteer_name=?, volunteer_email=?, volunteer_phone=?, availability=?, skills=? WHERE volunteer_id=?");
+        $stmt = $conn->prepare("UPDATE volunteers SET volunteer_name=?, volunteer_email=?, volunteer_phone_number=?, volunteer_availability=?, volunteer_skills=? WHERE volunteer_id=?");
         $stmt->bind_param('sssssi', $this->volunteer_name, $this->volunteer_email, $this->volunteer_phone, $this->availability, $this->skills, $this->volunteer_id);
         $ok = $stmt->execute();
         $stmt->close();
@@ -47,7 +47,7 @@ class Volunteer implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM volunteers ORDER BY submitted_at DESC");
+        $result = $db->getConnection()->query("SELECT * FROM volunteers ORDER BY applied_at ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
@@ -64,7 +64,7 @@ class Volunteer implements ICrudOperations, IReportable {
     }
 
     public static function generateReport(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM volunteers ORDER BY submitted_at DESC");
+        $result = $db->getConnection()->query("SELECT * FROM volunteers ORDER BY applied_at ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

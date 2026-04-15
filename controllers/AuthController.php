@@ -10,16 +10,16 @@ class AuthController {
         $conn = $db->getConnection();
 
         // Fetch hashed password and role from uns_pws
-        $stmt = $conn->prepare("SELECT u.usnpw_id, u.username, u.password_hash, u.user_type_id, ut.type_name FROM uns_pws u LEFT JOIN user_type ut ON u.user_type_id=ut.user_type_id WHERE u.username=? LIMIT 1");
+        $stmt = $conn->prepare("SELECT u.usnpw_id, u.username, u.password as password_hash, u.user_type_id, ut.type_name FROM uns_pws u LEFT JOIN user_type ut ON u.user_type_id=ut.user_type_id WHERE u.username=? LIMIT 1");
         $stmt->bind_param('s', $username);
         $stmt->execute();
         $row = $stmt->get_result()->fetch_assoc();
         $stmt->close();
 
         if (!$row) return false;
-
-        // NFR-04: verify hashed password
-        if (!password_verify($password, $row['password_hash'])) return false;
+        
+        // NFR-04: verify SHA-256 hashed password
+        if ($row['password_hash'] !== hash('sha256', $password)) return false;
 
         // Store session variables — NFR-06
         $_SESSION['logged_in']    = true;

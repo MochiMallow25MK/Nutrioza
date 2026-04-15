@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
 
 class Message implements ICrudOperations {
     public int    $message_id;
@@ -40,7 +40,7 @@ class Message implements ICrudOperations {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM messages ORDER BY submitted_at DESC");
+        $result = $db->getConnection()->query("SELECT * FROM messages ORDER BY submitted_at ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

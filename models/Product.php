@@ -1,31 +1,37 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
 
 class Product implements ICrudOperations {
     public int    $product_id;
     public int    $supplier_id;
     public string $product_name;
     public string $category;
-    public string $unit;
-    public int    $quantity_in_stock;
+    public string $description;
+    public string $unit_of_measure;
+    public int    $current_stock;
+    public int    $min_stock_level;
     public string $expiry_date;
-    public string $notes;
+    public string $storage_location;
+    public int    $is_active;
 
-    public function __construct(int $product_id, int $supplier_id, string $product_name, string $category, string $unit, int $quantity_in_stock, string $expiry_date, string $notes) {
+    public function __construct(int $product_id, int $supplier_id, string $product_name, string $category, string $description, string $unit_of_measure, int $current_stock, int $min_stock_level, string $expiry_date, string $storage_location, int $is_active) {
         $this->product_id        = $product_id;
         $this->supplier_id       = $supplier_id;
         $this->product_name      = $product_name;
         $this->category          = $category;
-        $this->unit              = $unit;
-        $this->quantity_in_stock = $quantity_in_stock;
+        $this->description       = $description;
+        $this->unit_of_measure   = $unit_of_measure;
+        $this->current_stock     = $current_stock;
+        $this->min_stock_level   = $min_stock_level;
         $this->expiry_date       = $expiry_date;
-        $this->notes             = $notes;
+        $this->storage_location  = $storage_location;
+        $this->is_active         = $is_active;
     }
 
     public function create(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("INSERT INTO product (supplier_id, product_name, category, unit, quantity_in_stock, expiry_date, notes) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param('isssisss', $this->supplier_id, $this->product_name, $this->category, $this->unit, $this->quantity_in_stock, $this->expiry_date, $this->notes);
+        $stmt = $conn->prepare("INSERT INTO product (supplier_id, product_name, category, description, unit_of_measure, current_stock, min_stock_level, expiry_date, storage_location, is_active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('isssiiis', $this->supplier_id, $this->product_name, $this->category, $this->description, $this->unit_of_measure, $this->current_stock, $this->min_stock_level, $this->expiry_date, $this->storage_location, $this->is_active);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;
@@ -33,8 +39,8 @@ class Product implements ICrudOperations {
 
     public function update(Database $db): bool {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("UPDATE product SET supplier_id=?, product_name=?, category=?, unit=?, quantity_in_stock=?, expiry_date=?, notes=? WHERE product_id=?");
-        $stmt->bind_param('isssissi', $this->supplier_id, $this->product_name, $this->category, $this->unit, $this->quantity_in_stock, $this->expiry_date, $this->notes, $this->product_id);
+        $stmt = $conn->prepare("UPDATE product SET supplier_id=?, product_name=?, category=?, description=?, unit_of_measure=?, current_stock=?, min_stock_level=?, expiry_date=?, storage_location=?, is_active=? WHERE product_id=?");
+        $stmt->bind_param('isssiiis', $this->supplier_id, $this->product_name, $this->category, $this->description, $this->unit_of_measure, $this->current_stock, $this->min_stock_level, $this->expiry_date, $this->storage_location, $this->is_active, $this->product_id);
         $ok = $stmt->execute();
         $stmt->close();
         return $ok;

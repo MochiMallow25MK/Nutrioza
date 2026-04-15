@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '/../interfaces/ICrudOperations.php';
-
+require_once __DIR__ . '/interfaces/ICrudOperations.php';
 class UsertypeMenu implements ICrudOperations {
     public int    $permission_id;
     public int    $user_type_id;

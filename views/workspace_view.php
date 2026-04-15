@@ -14,8 +14,7 @@ class WorkspaceView {
         <!-- Top nav -->
         <nav class="navbar" style="justify-content:space-between;">
             <span style="color:var(--cream); font-size:1.1rem; letter-spacing:2px;">NUTRIOZA 🌾</span>
-            <div style="display:flex; gap:8px;">
-                <a href="homepage.php">Home</a>
+            <div style="display:flex; gap: 8px;">
                 <a href="logout.php">Logout</a>
             </div>
         </nav>
