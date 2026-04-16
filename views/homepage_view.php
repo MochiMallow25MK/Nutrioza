@@ -7,9 +7,6 @@ class HomepageView {
         ?>
         <div class="hero">
             <h1>NUTRIOZA 🌾</h1>
-            <p>Nutrioza is a comprehensive food distribution management system dedicated to reducing
-               food waste and fighting hunger. We connect food suppliers with those in need through
-               efficient inventory tracking, distribution management, and community engagement.</p>
         </div>
         
         <nav class="navbar">

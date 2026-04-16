@@ -19,10 +19,9 @@ class AboutView {
             <div class="card about-content">
                 <h2 class="about-subtitle">Smart, transparent and efficient platform</h2>
                 <p class="about-text">
-                    The global food industry is evolving from a fragmented, manual, and wasteful state
-                    to a data-driven, streamlined, and sustainable one. We believe that with the rise
-                    of integrated logistics and real-time inventory management, a new era of food security
-                    is taking place, and we aim to play a fundamental and key role in this transformation.
+                Nutrioza is a comprehensive food distribution management system dedicated to reducing
+                food waste and fighting hunger. We connect food suppliers with those in need through
+                efficient inventory tracking, distribution management, and community engagement.
                 </p>
 
                 <div class="stats-container">
