@@ -39,7 +39,7 @@ class UsertypeMenu implements ICrudOperations {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT um.*, ut.type_name FROM usertype_menu um LEFT JOIN user_type ut ON um.user_type_id=ut.user_type_id");
+        $result = $db->getConnection()->query("SELECT * FROM usertype_menu ORDER BY permission_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

@@ -51,7 +51,7 @@ class Receipt implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT r.*, l.location_name FROM receipts r LEFT JOIN locations l ON r.location_id=l.location_id ORDER BY r.receipt_date ASC");
+        $result = $db->getConnection()->query("SELECT * FROM receipts ORDER BY receipt_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
@@ -59,7 +59,7 @@ class Receipt implements ICrudOperations, IReportable {
 
     public static function getById(Database $db, int $id) {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("SELECT r.*, l.location_name FROM receipts r LEFT JOIN locations l ON r.location_id=l.location_id WHERE r.receipt_id =?");
+        $stmt = $conn->prepare("SELECT * FROM receipts WHERE receipt_id=?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $row = $stmt->get_result()->fetch_assoc();

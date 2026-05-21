@@ -56,7 +56,7 @@ class Product implements ICrudOperations {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT p.*, s.supplier_name FROM product p LEFT JOIN supplier s ON p.supplier_id=s.supplier_id ORDER BY p.product_name");
+        $result = $db->getConnection()->query("SELECT * FROM product ORDER BY product_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
@@ -64,7 +64,7 @@ class Product implements ICrudOperations {
 
     public static function getById(Database $db, int $id) {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("SELECT p.*, s.supplier_name FROM product p LEFT JOIN supplier s ON p.supplier_id=s.supplier_id WHERE p.product_id=?");
+        $stmt = $conn->prepare("SELECT * FROM product WHERE product_id=?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $row = $stmt->get_result()->fetch_assoc();

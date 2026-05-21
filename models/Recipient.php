@@ -49,7 +49,7 @@ class Recipient implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM recipients ORDER BY recipient_name");
+        $result = $db->getConnection()->query("SELECT * FROM recipients ORDER BY recipient_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

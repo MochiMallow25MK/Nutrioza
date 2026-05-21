@@ -37,8 +37,8 @@ class UserType implements ICrudOperations {
         return $ok;
     }
 
-    public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM user_type");
+   public static function getAll(Database $db): array {
+        $result = $db->getConnection()->query("SELECT * FROM user_type ORDER BY user_type_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

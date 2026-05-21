@@ -51,7 +51,7 @@ class Supplier implements ICrudOperations {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM supplier ORDER BY supplier_name");
+        $result = $db->getConnection()->query("SELECT * FROM supplier ORDER BY supplier_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

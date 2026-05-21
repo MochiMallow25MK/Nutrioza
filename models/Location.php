@@ -42,7 +42,7 @@ class Location implements ICrudOperations {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT * FROM locations ORDER BY location_name");
+        $result = $db->getConnection()->query("SELECT * FROM locations ORDER BY location_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;

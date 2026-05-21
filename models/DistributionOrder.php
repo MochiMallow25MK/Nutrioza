@@ -55,7 +55,7 @@ class DistributionOrder implements ICrudOperations, IReportable {
     }
 
     public static function getAll(Database $db): array {
-        $result = $db->getConnection()->query("SELECT do.*, u.full_name AS created_by_name FROM distribution_order do LEFT JOIN user u ON do.created_by=u.user_id ORDER BY do.distribution_date ASC");
+        $result = $db->getConnection()->query("SELECT * FROM distribution_order ORDER BY order_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
@@ -63,7 +63,7 @@ class DistributionOrder implements ICrudOperations, IReportable {
 
     public static function getById(Database $db, int $id) {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("SELECT do.*, u.full_name AS created_by_name FROM distribution_order do LEFT JOIN user u ON do.created_by=u.user_id WHERE do.order_id=?");
+        $stmt = $conn->prepare("SELECT * FROM distribution_order WHERE order_id=?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $row = $stmt->get_result()->fetch_assoc();

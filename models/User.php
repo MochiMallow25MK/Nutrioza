@@ -49,8 +49,7 @@ class User implements ICrudOperations {
     }
 
     public static function getAll(Database $db): array {
-        $conn   = $db->getConnection();
-        $result = $conn->query("SELECT u.*, ut.type_name FROM user u LEFT JOIN user_type ut ON u.user_type_id=ut.user_type_id");
+        $result = $db->getConnection()->query("SELECT * FROM user ORDER BY user_id ASC");
         $rows   = [];
         while ($row = $result->fetch_assoc()) $rows[] = $row;
         return $rows;
@@ -58,7 +57,7 @@ class User implements ICrudOperations {
 
     public static function getById(Database $db, int $id) {
         $conn = $db->getConnection();
-        $stmt = $conn->prepare("SELECT u.*, ut.type_name FROM user u LEFT JOIN user_type ut ON u.user_type_id=ut.user_type_id WHERE u.user_id=?");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE user_id=?");
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $row = $stmt->get_result()->fetch_assoc();
@@ -66,4 +65,3 @@ class User implements ICrudOperations {
         return $row;
     }
 }
-?>
