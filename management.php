@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="login-box">
     <div class="login-logo">NUTRIOZA 🌾</div>
-    <h2>Management Login</h2>
+    <h2>Login</h2>
 
     <?php if ($error): ?>
         <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
