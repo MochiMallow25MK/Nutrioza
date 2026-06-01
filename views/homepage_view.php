@@ -1,6 +1,4 @@
 <?php
-// views/homepage_view.php
-// Renders the homepage UI — called by homepage.php
 class HomepageView {
 
     public function render(): void {

@@ -1,11 +1,6 @@
 <?php
-// views/report_view.php
-// Renders the printable report table for the Auditor role
-// Called by workspace.php
 class ReportView {
 
-    // $table      — table name being reported on
-    // $reportData — array of rows returned by ReportController
     public function render(string $table, array $reportData): void {
         $label = ucwords(str_replace('_', ' ', $table));
         ?>

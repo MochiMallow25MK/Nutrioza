@@ -1,14 +1,6 @@
 <?php
-// views/workspace_view.php
-// Renders the workspace shell: top navbar + 20/80 sidebar/content layout
-// Called by workspace.php — passes data in, this file only handles display
 class WorkspaceView {
 
-    // Render the full page shell
-    // $sidebar  — HTML string for the sidebar
-    // $content  — HTML string for the main content area
-    // $role     — logged-in user's role name
-    // $username — logged-in username
     public function render(string $sidebar, string $content, string $role, string $username): void {
         ?>
         <!-- Top nav -->

@@ -1,6 +1,4 @@
 <?php
-// views/contact_view.php
-// Renders the Contact Us page UI — called by contact.php
 class ContactView {
 
     public function render(bool $success = false, bool $error = false): void {

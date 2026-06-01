@@ -1,9 +1,6 @@
 <?php
 require_once __DIR__ . '/interfaces/ICrudOperations.php';
 
-// EAV: Entity-Attribute-Value model
-// Stores flexible extra attributes for any entity in any table
-
 class EavAttribute implements ICrudOperations {
     public int    $eav_id;
     public string $entity_type;

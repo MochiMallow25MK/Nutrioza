@@ -1,19 +1,6 @@
 <?php
-// views/crud_view.php
-// Renders the CRUD table, search toolbar, create modal, and edit form
-// Called by workspace.php — receives data arrays, renders nothing on its own
 class CrudView {
 
-    // ── Main entry point ──────────────────────────────────────────────────────
-    // $table       — active table name
-    // $rows        — array of data rows
-    // $editRow     — single row array when editing, or null
-    // $isViewer    — read-only flag
-    // $message     — success/error feedback message
-    // $msgType     — 'success' or 'error'
-    // $searchVal   — current search keyword
-    // $dateFrom    — current date filter from
-    // $dateTo      — current date filter to
     public function render(
         string $table,
         array  $rows,

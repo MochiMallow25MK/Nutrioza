@@ -1,6 +1,4 @@
 <?php
-// views/about_view.php
-// Renders the About Us page UI — called by about.php
 class AboutView {
 
     public function render(): void {
